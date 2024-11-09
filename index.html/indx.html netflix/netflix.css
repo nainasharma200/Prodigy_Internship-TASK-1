@@ -1,0 +1,166 @@
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #141414;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #141414;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e50914;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #ebdede;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.profile-pic {
+  width: 40px;
+  border-radius: 50%;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('https://image.cnbcfm.com/api/v1/image/104768589-movies-anywhere.JPG?v=1507816437&w=1920&h=1080');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #e50914;
+  padding-bottom: 50px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #e50914;  
+  color: #f6f0f0;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn-secondary {
+  background-color: #333;
+}
+
+/* Movie Section */
+.movies-section {
+  padding: 20px;
+}
+
+.movies-section h2 {
+  margin-bottom: 10px;
+}
+
+.movie-row {
+  display: flex;
+  overflow-x: auto;
+}
+
+.movie-row img {
+  width: 150px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.movie-row img:hover {
+  transform: scale(1.1);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .movie-row img {
+    width: 120px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .hero {
+    height: 40vh;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .movie-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-row img {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
